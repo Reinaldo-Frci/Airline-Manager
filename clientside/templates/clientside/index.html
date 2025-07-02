@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flights123</title>
         <link rel="stylesheet" href="{% static 'clientside/css/index.css'%}">
+        <script src="{% static 'clientside/js/index.js' %}"></script>
     </head>
 
 <body>
@@ -19,10 +20,14 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">My Flights</a></li>
                 {% if request.user.is_authenticated %}
-                    <div><a href="{% url 'login'%}">Login</a></div>
+                    <div class="popup" id="login-button">Login
+                        <div id="login-popup">OIIIII</div>
+                        </div>
+                    </div>
                 {% endif %}
             </ul>
         </nav>
+
         <div class="header-text">
             <p>Your <span>Flights</span></p>
             <h1>Anywhere<br>Anytime</h1>
@@ -35,9 +40,9 @@
     {% for flight in flights %}
     <li><a href="{% url 'flight' flight.id %}">
         Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}
-    </a>
-</li>
-{% endfor %}
+        </a>
+    </li>
+    {% endfor %}
 </ul>
 </div>
 </body>
