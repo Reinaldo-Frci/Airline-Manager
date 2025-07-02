@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'clientside',
     'flights',
     'users',
     'django.contrib.admin',
