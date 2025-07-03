@@ -1,8 +1,8 @@
 function popup(){
-  var popup = document.getElementById("popup");
-  popup.classList.toggle("show");
+  var popup = document.getElementById("myPopup");
+  popup.style.display = "block";
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector('#login').onclick = popup;
+    document.getElementById("loginButton").onclick = popup;
 })

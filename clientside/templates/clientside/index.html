@@ -20,10 +20,8 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">My Flights</a></li>
                 {% if request.user.is_authenticated %}
-                    <div class="popup" id="login-button">Login
-                        <div id="login-popup">OIIIII</div>
-                        </div>
-                    </div>
+                <div class="popup" id="loginButton">Login
+                </div>
                 {% endif %}
             </ul>
         </nav>
@@ -33,8 +31,11 @@
             <h1>Anywhere<br>Anytime</h1>
         </div>
     </div>
-
+    <div class="popuptext" id="myPopup">
+        <h1>OIIIIIII</h1>
+    </div>
 </div>
+
 <div id="deals">
 <ul>
     {% for flight in flights %}
