@@ -104,7 +104,7 @@ nav ul li a:hover::after{
 
 /* The actual popup (appears on top) */
 .popuptext {
-    display: flex;
+    display: none;
     width: 160px;
     background-color: #555;
     color: #fff;
