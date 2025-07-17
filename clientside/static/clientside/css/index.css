@@ -81,11 +81,11 @@ nav ul li a:hover::after{
 
 
 
-.popup{    
+.popup{
     position: fixed;
     right: 3%;
     top: 20px;
-    margin: 0px 10px;
+    margin: 0 10px;
     height: 40px;
     width: 70px;
     border-radius: 10px;
@@ -104,7 +104,7 @@ nav ul li a:hover::after{
 
 /* The actual popup (appears on top) */
 .popuptext {
-    display: none;
+    visibility: hidden;
     width: 160px;
     background-color: #555;
     color: #fff;
@@ -120,7 +120,7 @@ nav ul li a:hover::after{
 
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
+.popuptext .show {
   visibility: visible;
 }
 

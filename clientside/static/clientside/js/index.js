@@ -1,6 +1,6 @@
 function popup(){
-  var popup = document.getElementById("myPopup");
-  popup.style.display = "block";
+  let popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
 
 document.addEventListener('DOMContentLoaded', function(){
