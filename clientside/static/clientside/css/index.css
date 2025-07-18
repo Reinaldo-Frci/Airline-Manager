@@ -81,7 +81,7 @@ nav ul li a:hover::after{
 
 
 
-.popup{
+#loginButton{
     position: fixed;
     right: 3%;
     top: 20px;
@@ -98,29 +98,53 @@ nav ul li a:hover::after{
 
 }
 
-.popup:hover{
+#loginButton:hover{
     background-color:#616bad;
 }
 
 /* The actual popup (appears on top) */
-.popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
+.popup {
+    visibility: visible;
+    display: flex;
+    background: rgba(255, 255, 255, 0.12);
+    width: 150%;
+    height: 150%;
     border-radius: 6px;
     padding: 8px 0;
-    position: absolute;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    right: 45%;
-    top: 100px;
+
+}
+
+.popup form {
+    display: grid;
+    justify-content: center;
+    margin: 2px 2px;
+    align-items: center;
+    background-color: #264b5d;
+    border-radius: 30px;
+    height: 45%;
+    width: 25%;
+    position: absolute;
+    top: 40%;
+}
+.popup form input {
+    margin: 10px;
+    left: 15px;
+    width: 340px;
+    height: 80px;
+    border-radius: 60px;
 }
 
 
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popuptext .show {
+.popup.show {
   visibility: visible;
 }
 

@@ -20,12 +20,17 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">My Flights</a></li>
                 {% if not request.user.is_authenticated %}
-                <div class="popup" id="loginButton">Login</div>
+                <div class="popupButton" id="loginButton">Login</div>
                 {% endif %}
             </ul>
         </nav>
-        <div class="popuptext" id="myPopup">
-            <h1>OIIIIIII</h1>
+        <div class="popup" id="loginPopup">
+            <form>
+                <h1>Login</h1>
+                <input id="email" type="text" placeholder="Email">
+                <input id="password" type="password" placeholder="Password">
+                <button type="submit" name="submit">Login</button>
+            </form>
         </div>
         <div class="header-text">
             <p>Your <span>Flights</span></p>
